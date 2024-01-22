@@ -20,8 +20,42 @@
 // console.log(fileList);
 
 
-const cowsay = require('cowsay');
+// const cowsay = require('cowsay');
 
-console.log(cowsay.say({
-    text:"My name is Olaf!",
-}));
+// console.log(cowsay.say({
+//     text:"My name is Olaf!",
+// }));
+
+
+// const fs = require('fs');
+
+// console.log('Start');
+
+// let content = fs.readFileSync('./new', 'utf8');
+// console.log(content);
+
+// console.log('Finish');
+
+//복붙
+
+// const fs = require('fs');
+
+// console.log('Start');
+
+// //arrow function 
+// fs.readFile('./new', 'utf8', (error, data)=> {
+//     console.log(data);
+// });
+// console.log('Finish');
+
+//EventEmiiter class 전파기 
+const EventEmitter = require('events'); // event라는 이름의 코어모듈
+
+const myEmitter = new EventEmitter();
+
+myEmitter.on('test', ()=> {
+    console.log('Success!');
+});
+
+//emit 이벤트를 발생시키다 
+myEmitter.emit('test');
